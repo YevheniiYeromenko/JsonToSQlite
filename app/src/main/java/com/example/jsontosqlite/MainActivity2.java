@@ -23,7 +23,7 @@ import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     private static OkHttpClient client = new OkHttpClient();
     public static String run(String url) throws IOException {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    String responseCurr = MainActivity.run(Config.URL);
+                    String responseCurr = MainActivity2.run(Config.URL);
                     //Log.wtf("Json", responseCurr);
                     APIService apiService = new RetrofitModule().createRetrofit();
                     Call<List<Currency>> responceData = apiService.loadCurrency();
